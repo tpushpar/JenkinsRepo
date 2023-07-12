@@ -20,15 +20,13 @@ pipeline {
              stage('Unit Testing'){
                steps {
                 echo 'Parallel Stage - Unit Testing'
-            }
+                }
              }
-           }
-           stage('Integration Testing')
-           {
-           steps {
+             stage('Integration Testing'){
+               steps {
                 echo 'Parallel Stage - Integration Testing'
+               }
             }
-        }
          }
     }
 }
