@@ -6,27 +6,30 @@ pipeline {
             steps {
                 echo 'Hello World'
             }
-          stage('One') {
+		}	
+        stage('One') {
             steps {
                 echo 'Stage One - Devlopment'
             }
-          stage('Two') {
+		}	
+        stage('Two') {
             steps {
                 echo 'Stage Two - Build'
             }
         }
-         stage('Three') {
+        stage('Three') {
            parallel{
-             stage('Unit Testing'){
+              stage('Unit Testing'){
                steps {
                 echo 'Parallel Stage - Unit Testing'
                 }
-             }
-             stage('Integration Testing'){
+              }
+              stage('Integration Testing'){
                steps {
                 echo 'Parallel Stage - Integration Testing'
                }
-            }
-         }
-    }
-}
+             }
+           }
+		}
+   }
+}   
